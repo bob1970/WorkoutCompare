@@ -81,7 +81,7 @@ def GenerateSeries(gpxFile):
 		
 		AvgSpeed = CalculateSpeed(TotalDistance, TotalSeconds)
 
-		ChartSpeed = Speed
+		#ChartSpeed = Speed
 		ChartSpeed = AvgSpeed
 		#output line
 		if IntervalSeconds >= Interval or i == len(eleList)-1:
