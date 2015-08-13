@@ -97,19 +97,21 @@ def GenerateSeries(gpxFile):
 
 def CalculateSeconds(t1, t2):
 	arr = t1.split(":")
-	h = arr[0]
-	m = arr[1]
-	s = arr[2]
-	s = s.split("-")[0]
-	Seconds1 = int(s)*1 + int(m)*60 + int(h)*60*60
+	h1 = arr[0]
+	m1 = arr[1]
+	s1 = arr[2]
+	s1 = s1.split("-")[0]
 	
 	arr = t2.split(":")
-	h = arr[0]
-	m = arr[1]
-	s = arr[2]
-	s = s.split("-")[0]
-	Seconds2 = int(s)*1 + int(m)*60 + int(h)*60*60
-
+	h2 = arr[0]
+	m2 = arr[1]
+	s2 = arr[2]
+	s2 = s2.split("-")[0]
+	if h1 != h2:
+		h1 = "1"
+		h2 = "2" 	
+	Seconds1 = int(s1)*1 + int(m1)*60 + int(h1)*60*60
+	Seconds2 = int(s2)*1 + int(m2)*60 + int(h2)*60*60
 	return int(Seconds2) - int(Seconds1)
 
 def CalculateDistance(long1, lat1, long2, lat2):
